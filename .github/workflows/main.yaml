@@ -20,7 +20,13 @@ jobs:
       - name: Build
         run: make all
 
+      - name: Package all binaries into tar.gz
+        run: |
+          VERSION_TAG=${GITHUB_REF##*/}
+          mkdir -p dist
+          tar -czvf dist/nvidia-gpu-ROP-count-linux-${VERSION_TAG}.tar.gz -C bin .
+
       - name: Create GitHub Release and Upload Assets
         uses: softprops/action-gh-release@v2
         with:
-          files: bin/*
+          files: dist/*
