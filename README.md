@@ -11,10 +11,11 @@ Counts the [ROPs](https://en.wikipedia.org/wiki/Render_output_unit) (render outp
 see [nvidia-rtx-blackwell-gpu-architecture.pdf](https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf) for more details
 
 # Quickstart
-Download the latest release from the [release page](https://github.com/pwntr/nvidia-gpu-ROP-count-linux/releases), unpack it and run the desired binary (see below for differences)!
-
 ## Prereqs
 Make sure you have the latest Nvidia driver installed, and verify that `nvidia-smi` is also working.
+
+## Action
+Download the latest release from the [release page](https://github.com/pwntr/nvidia-gpu-ROP-count-linux/releases), unpack it, and run the desired binary (see below for differences)!
 
 ## Which binary does what?
 * `rop`, the simplest check, outputs the ROP count for a single Nvidia GPU:
