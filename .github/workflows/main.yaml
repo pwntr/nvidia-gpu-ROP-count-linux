@@ -25,11 +25,15 @@ jobs:
           # create the tar.gz file
           VERSION_TAG=${GITHUB_REF##*/}
           # create the checksum file for all binaries, to be included in the tar.gz file
-          sha256sum bin/* > bin/checksums-${VERSION_TAG}.sha256
+          cd bin
+          sha256sum * > checksums-${VERSION_TAG}.sha256
+          cd ..
           mkdir -p dist
           tar --exclude='.gitkeep' -czvf dist/nvidia-gpu-ROP-count-linux-${VERSION_TAG}.tar.gz -C bin .
           # create the checksum file for the tar.gz file
-          sha256sum dist/nvidia-gpu-ROP-count-linux-${VERSION_TAG}.tar.gz > dist/nvidia-gpu-ROP-count-linux-${VERSION_TAG}.sha256
+          cd dist
+          sha256sum nvidia-gpu-ROP-count-linux-${VERSION_TAG}.tar.gz > dist/nvidia-gpu-ROP-count-linux-${VERSION_TAG}.sha256
+          cd ..
         
       - name: Create GitHub Release and Upload Assets
         uses: softprops/action-gh-release@v2
