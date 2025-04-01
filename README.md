@@ -47,7 +47,7 @@ Download the latest release from the [release page](https://github.com/pwntr/nvi
 
 # Build
 ## Prereqs
-Local builds requires `gcc` and `make`. For `ropnvml` you need to have `libnvidia-ml-dev` (on Ubuntu, `libnvidia-ml` for Fedora, from the CUDA repo) or the [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) installed when building locally. For using the container image based builds, you need to have Docker or Podman installed.
+Local builds require `gcc` and `make`. For `ropnvml` you need to have `libnvidia-ml-dev` (on Ubuntu, `libnvidia-ml` for Fedora, from the CUDA repo) or the [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) installed when building locally. For using the container image based build process, you need to have Docker or Podman installed.
 
 ## Make
 The provided `Makefile` contains some simple targets:
