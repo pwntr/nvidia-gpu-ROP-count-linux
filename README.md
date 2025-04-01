@@ -8,7 +8,7 @@ Counts the [ROPs](https://en.wikipedia.org/wiki/Render_output_unit) (render outp
 * **RTX 5070 TI**: 96
 * **RTX 5070**: 80
 
-see [nvidia-rtx-blackwell-gpu-architecture.pdf](https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf) for more details
+See [nvidia-rtx-blackwell-gpu-architecture.pdf](https://images.nvidia.com/aem-dam/Solutions/geforce/blackwell/nvidia-rtx-blackwell-gpu-architecture.pdf) for more details.
 
 # Quickstart
 ## Prereqs
