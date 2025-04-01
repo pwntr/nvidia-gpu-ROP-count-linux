@@ -20,14 +20,14 @@ Download the latest release from the [release page](https://github.com/pwntr/nvi
 ## Which binary does what?
 * `rop`, the simplest check, outputs the ROP count for a single Nvidia GPU:
     ```
-    $ bin/rop
+    $ ./rop
     ROP unit count: 12
     ROP operations factor: 8
     ROP operations count: 96
     ```
 * `ropmulti` outputs the ROP count for all the Nvidia GPUs in the system:
     ```
-    $ bin/ropmulti
+    $ ./ropmulti
     --- Processing GPU 0 /dev/nvidia0 ---
     GPU 0 ROP unit count: 12
     GPU 0 ROP operations factor: 8
@@ -36,7 +36,7 @@ Download the latest release from the [release page](https://github.com/pwntr/nvi
     ```
 * `ropnvml` additionally outputs the friendly name of the GPUs in the system:
     ```
-    $ bin/ropnvml
+    $ ./ropnvml
     --- Processing GPU 0 /dev/nvidia0 ---
     Name: NVIDIA GeForce RTX 5070 Ti
     ROP unit count: 12
