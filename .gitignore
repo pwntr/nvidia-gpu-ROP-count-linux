@@ -7,6 +7,9 @@
 *.obj
 *.elf
 
+bin/*
+!bin/.gitkeep
+
 # Linker output
 *.ilk
 *.map
