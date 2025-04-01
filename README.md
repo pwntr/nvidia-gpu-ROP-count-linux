@@ -45,14 +45,14 @@ Make sure you have the latest Nvidia driver installed, and verify that `nvidia-s
 
 # Build
 ## Prereqs
-Local builds requires `gcc` and `make`. For `ropnvml` you need to have the [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) installed when building locally. For using the container image based builds, you'd need to have Docker or Podman installed.
+Local builds requires `gcc` and `make`. For `ropnvml` you need to have `libnvidia-ml-dev` (on Ubuntu, `libnvidia-ml` for Fedora, from the CUDA repo) or the [CUDA Toolkit](https://developer.nvidia.com/cuda-toolkit) installed when building locally. For using the container image based builds, you need to have Docker or Podman installed.
 
 ## Make
 The provided `Makefile` contains some simple targets:
 
 * `make all` build all the binaries locally
 * `make rop / ropmulti / ropnvml`: locally builds only the given target binary
-* `make image` builds the Docker image based on the `Dockerfile`, which includes the Cuda Toolkit, `gcc`, and `make`
+* `make image` builds the Docker image based on the `Dockerfile`, which includes `libnvidia-ml-dev`, `gcc`, and `make`
 * `make docker` uses the newly built image from above to run the build process and locally save all binaries into the `bin` directory, which we volume mount as part of this source dir into the running container
 
 # Credit
