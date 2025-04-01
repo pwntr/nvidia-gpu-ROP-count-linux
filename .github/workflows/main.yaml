@@ -26,13 +26,13 @@ jobs:
           VERSION_TAG=${GITHUB_REF##*/}
           # create the checksum file for all binaries, to be included in the tar.gz file
           cd bin
-          sha256sum * > checksums-amd64-${VERSION_TAG}.sha256
+          sha256sum * > checksums-x86_64-${VERSION_TAG}.sha256
           cd ..
           mkdir -p dist
-          tar --exclude='.gitkeep' -czvf dist/nvidia-gpu-ROP-count-linux-amd64-${VERSION_TAG}.tar.gz -C bin .
+          tar --exclude='.gitkeep' -czvf dist/nvidia-gpu-ROP-count-linux-x86_64-${VERSION_TAG}.tar.gz -C bin .
           # create the checksum file for the tar.gz file
           cd dist
-          sha256sum nvidia-gpu-ROP-count-linux-amd64-${VERSION_TAG}.tar.gz > release-package-checksum-amd64-${VERSION_TAG}.sha256
+          sha256sum nvidia-gpu-ROP-count-linux-x86_64-${VERSION_TAG}.tar.gz > release-package-checksum-x86_64-${VERSION_TAG}.sha256
           cd ..
         
       - name: Create GitHub Release and Upload Assets
