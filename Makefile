@@ -1,13 +1,13 @@
 all: rop ropmulti ropnvml
 
 rop:
-	gcc -o bin/rop src/rop.c
+	gcc -o bin/rop -Os -flto src/rop.c
 
 ropmulti:
-	gcc -o bin/ropmulti src/ropmulti.c
+	gcc -o bin/ropmulti -Os -flto src/ropmulti.c
 
 ropnvml:
-	gcc -o bin/ropnvml src/ropnvml.c -lnvidia-ml -I/usr/local/cuda/include
+	gcc -o bin/ropnvml -Os -flto src/ropnvml.c -lnvidia-ml -I/usr/local/cuda/include
 
 # build the builder image
 image: Dockerfile
